@@ -1,0 +1,172 @@
+<h1>猪妞宝宝想对你说的话</h1>
+<marquee>仙女下凡仙女下凡仙女下凡仙女下凡仙女下凡</marquee>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>9178MYFAVOURITE</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* 防止滚动条出现 */
+            background-color: #f0f8ff; /* 背景颜色，模拟天空 */
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+
+        /* 仙女弹窗的样式 */
+        .fairy-popup {
+            position: absolute;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #ffccff 0%, #ccffff 100%); /* 粉蓝渐变 */
+            border: 3px solid #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2), 
+                        0 0 20px rgba(255, 255, 255, 0.5) inset;
+            color: #8a2be2;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            user-select: none; /* 禁止选中文本 */
+            z-index: 9999;
+            /* 添加飘落动画 */
+            animation: float 6s infinite ease-in-out;
+        }
+
+        /* 飘落和轻微左右摇摆的动画 */
+        @keyframes float {
+            0% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(20px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(-5deg); }
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // 创建仙女弹窗的函数
+    function createFairy() {
+        // 创建一个新的 div 元素作为弹窗
+        const fairy = document.createElement('div');
+        fairy.className = 'fairy-popup';
+        fairy.textContent = '🧚‍♀️ 仙女下凡！';
+
+        // 获取窗口的宽度和高度
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        // 生成随机位置 (为了防止弹窗被截断，减去弹窗自身的宽高)
+        const fairyWidth = 150; // 估算宽度
+        const fairyHeight = 60; // 估算高度
+
+        const randomX = Math.floor(Math.random() * (windowWidth - fairyWidth));
+        const randomY = Math.floor(Math.random() * (windowHeight - fairyHeight));
+
+        // 设置弹窗的位置
+        fairy.style.left = randomX + 'px';
+        fairy.style.top = randomY + 'px';
+
+        // 点击弹窗时消失
+        fairy.addEventListener('click', function() {
+            this.remove();
+        });
+
+        // 将弹窗添加到页面中
+        document.body.appendChild(fairy);
+
+        // 设置一个定时器，让弹窗过一会儿自动消失，防止页面卡死
+        setTimeout(() => {
+            if (document.body.contains(fairy)) {
+                fairy.remove();
+            }
+        }, 8888); // 3秒后自动消失
+    }
+
+    // 持续不断地创建仙女 (间隔时间越短，弹窗越密集)
+    setInterval(createFairy, 88); // 每 500 毫秒生成一个
+
+    // 页面加载完成后立即生成一个
+    window.onload = function() {
+        createFairy();
+    };
+    !DOCTYPE
+</script>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可爱的猪妞</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* 设置一个可爱的背景颜色 */
+            background-color: #fff5f5;
+            /* 字体设置 */
+            font-family: 'Microsoft YaHei', sans-serif;
+            /* 使用 Flexbox 将内容居中 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            /* 添加一点背景图案 */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="%23ffccdd" opacity="0.3"/></svg>');
+        }
+
+        h1 {
+            color: #d32f2f;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+
+        /* 猪妞图片的样式 */
+        .pig-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* 让图片变成圆形 */
+            object-fit: cover; /* 保持图片比例填充 */
+            border: 5px solid #ff80ab;
+            box-shadow: 0 4px 15px rgba(255, 128, 171, 0.4);
+            margin: 20px 0;
+            /* 添加呼吸动画 */
+            animation: breathe 2s infinite alternate;
+        }
+
+        /* 图片呼吸灯效果 */
+        @keyframes breathe {
+            from { transform: scale(0.95); }
+            to { transform: scale(1); }
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🐷 猪妞驾到 🐷</h1>
+        
+        <!-- 这里是猪妞的图片 -->
+        <!-- 如果你有自己的图片，请将 src 属性里的链接替换掉 -->
+        <img src="https://img.icons8.com/color/200/000000/pig.png" alt="可爱的猪妞" class="pig-img">
+
+        <p>这是一只非常可爱、聪明又美丽的猪妞！</p>
+        <title>9178MYFAVOURITE</title>
+    </div>
+
+</body>
+</html>
